@@ -1,12 +1,16 @@
 <html>
 <body>
-<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
+<form name="form2">
+	<select name="jumpmenu" onChange="jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value)">
+<option>Jump to...</option>
+<option value=https://www.quackit.com>Quackit Homepage</option>
+<option value=https://www.quackit.com/javascript/>JavaScript</option>
+<option value=https://www.quackit.com/html/>HTML</option>
+<option value=https://www.quackit.com/css/>CSS</option>
+<option value=https://www.quackit.com/sql/tutorial/>SQL</option>
+<option value=https://www.quackit.com/database/tutorial/>Database Tutorial</option>
+<option value=https://www.quackit.com/web_hosting/>Web Hosting Tutorial</option>
+</select>
+</form>
 </body>
 </html>
