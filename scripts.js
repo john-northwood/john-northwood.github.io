@@ -119,7 +119,7 @@ function updateBnfTotals()
   let total = bnfTotalDepot + bnfTotalOral;
 
   document.getElementById("total_depot_bnf").innerHTML = roundToTwo(bnfTotalDepot);
-  document.getElementById("total_oral_bnf").innerHTML = roundToTwo(bnfTotalOral);
+  document.getElementById("total_oral_bnf").innerHTML = bnfTotalOral;
   document.getElementById("total_bnf").innerHTML = roundToTwo(total);
 
   clearTable(oralTable);
