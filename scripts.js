@@ -125,6 +125,7 @@ function addOral()
  	let depotEntry = {
 		oral: depotNames[index],
     dosage: dosage,
+    timing: "1 Day"
     bnf: bnf
 	};
 
@@ -181,7 +182,7 @@ function addDepot()
  	let depotEntry = {
 		depot: depotNames[index],
     dosage: dosage,
-    weeks: timings[weeksIndex],
+    timing: timings[weeksIndex],
     bnf: bnf
 	};
 
