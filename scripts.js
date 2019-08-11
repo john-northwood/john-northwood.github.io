@@ -139,7 +139,7 @@ function addOral()
   let index = oralPerscriptionSelection.selectedIndex;
   let maxDosage = maxOralDosages[index];
 
-  let bnf = roundToTwo(dosage / maxDosage);
+  let bnf = (dosage / maxDosage);
 
  	let oralEntry = {
 	  "Perscription Name": oralNames[index] + " [oral]",
