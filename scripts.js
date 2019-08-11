@@ -1,3 +1,4 @@
+
 var perscriptionSelection = document.createElement("select");
 
 var oralPerscriptionSelection = document.createElement("select");
@@ -29,14 +30,6 @@ for (let i = 0; i<timings.length; ++i)
 	let timing = timings[i];
   timingsSelection.options.add(new Option(timing));
 }
-
-var label = document.createElement("Label");
-label.innerHTML = "Dosage:";
-label.setAttribute("style", "font-weight:normal");
-
-var oralLabel = document.createElement("Label");
-oralLabel.innerHTML = "Dosage:";
-oralLabel.setAttribute("style", "font-weight:normal");
 
 var addDepotBtn = document.createElement("button");
 addDepotBtn.appendChild(document.createTextNode("Add Depot"));
@@ -123,7 +116,7 @@ function addOral()
   let bnf = dosage / maxDosage;
 
  	let depotEntry = {
-		oral: depotNames[index],
+		name: depotNames[index],
     dosage: dosage,
     timing: "1 Day",
     bnf: bnf
@@ -180,7 +173,7 @@ function addDepot()
   let bnf = (dosage / (days/maxTiming)) / maxDosage;
 
  	let depotEntry = {
-		depot: depotNames[index],
+		name: depotNames[index],
     dosage: dosage,
     timing: timings[weeksIndex],
     bnf: bnf
