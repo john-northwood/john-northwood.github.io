@@ -4,8 +4,53 @@
 	<script src="data.js"></script>
 </head>
 <body>
-	<div id="container"></div> 
-	<div id="depotTable"></div>
-	<script src="scripts.js"></script>
+
+<div id="container">
+  <table>
+    <tr>
+      <th>Perscription</th>
+      <th>Timing</th>
+      <th>Dosage</th>
+      <th></th>
+    </tr>
+
+    <tr>
+      <td id="depot_name"></td>
+      <td id="depot_timing"></td>
+      <td id="depot_dosage"></td>
+      <td id="depot_add"></td>
+    </tr>
+    <tr>
+      <td id="oral_name"></td>
+      <td></td>
+      <td id="oral_dosage"></td>
+      <td id="oral_add"></td>
+    </tr>
+  </table>
+</div>
+<br>
+<div id="totalsContainer">
+  <table>
+    <tr>
+      <td>Total BNF Depot</td>
+      <td id="total_depot_bnf">0</td>
+    </tr>
+    <tr>
+      <td>Total BNF Orals</td>
+      <td id="total_oral_bnf">0</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <th id="total_bnf">0</th>
+    </tr>
+  </table>
+</div>
+<br>
+<div id="depotTable"></div>
+<br>
+<div id="oralTable"></div>
+
+<script src="scripts.js"></script>
+
 </body>
 </html>

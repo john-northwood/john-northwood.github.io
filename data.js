@@ -1,5 +1,6 @@
 
-var orals = [
+
+let oralNames = [
   "Chlorpromazine",
   "Flupentixol",
   "Haloperidol",
@@ -30,7 +31,7 @@ var orals = [
 ];
 
 
-var maxOralDosages = [
+let maxOralDosages = [
   1000,
   18,
   20,
@@ -60,7 +61,7 @@ var maxOralDosages = [
   160
 ];
 
-var depotNames = [
+let depotNames = [
   "Aripiprazole",
   "Flupentixol",
   "Fluphenazine",
@@ -73,7 +74,7 @@ var depotNames = [
   "Olanzapine"
 ];
 
-var maxDepotDosages = [
+let maxDepotDosages = [
   400,
   400,
   100,
@@ -86,7 +87,7 @@ var maxDepotDosages = [
   300
 ];
 
-var depotMaxTimings = [
+let depotMaxTimings = [
   4,
   1,
   2,
@@ -99,11 +100,11 @@ var depotMaxTimings = [
   2
 ];
 
-var depotTimingDivisor = [
+let depotTimingDivisor = [
 	1,
   2,
   4,
   12
 ];
 
-var timings = ["1 Week", "2 Weeks", "4 Weeks", "12 Weeks"];
+let timings = ["1 Week", "2 Weeks", "4 Weeks", "12 Weeks"];
