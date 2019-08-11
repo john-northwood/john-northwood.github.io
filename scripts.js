@@ -102,6 +102,31 @@ function generateTable(table, data)
   }
 }
 
+function updateBnfTotals()
+{
+	let bnfTotalDepot = 0;
+  for (let i =0; i<depots.length; ++i)
+  {
+  	bnfTotalDepot += depots[i].bnf;
+	}
+
+  let bnfTotalOral = 0;
+  for (let i = 0; i<orals.length; ++i)
+  {
+  	bnfTotalOral += orals[i].bnf;
+	}
+
+  let total = bnfTotalDepot + bnfTotalOral;
+
+  document.getElementById("total_depot_bnf").innerHTML = roundToTwo(bnfTotalDepot);
+  document.getElementById("total_oral_bnf").innerHTML = roundToTwo(bnfTotalOral);
+  document.getElementById("total_bnf").innerHTML = roundToTwo(total);
+
+  clearTable(oralTable);
+  generateTableHead(oralTable, Object.keys(allPrescriptions[0]));
+  generateTable(oralTable, allPrescriptions);
+}
+
 function addOral()
 {
 	let dosage = parseInt(oralDosageText.value);
@@ -127,31 +152,6 @@ function addOral()
   allPrescriptions.push(oralEntry);
 
   updateBnfTotals();
-}
-
-function updateBnfTotals()
-{
-	let bnfTotalDepot = 0;
-  for (let i =0; i<depots.length; ++i)
-  {
-  	bnfTotalDepot += depots[i].bnf;
-	}
-
-  let bnfTotalOral = 0;
-  for (let i = 0; i<orals.length; ++i)
-  {
-  	bnfTotalOral += orals[i].bnf;
-	}
-
-  let total = bnfTotalDepot + bnfTotalOral;
-
-  document.getElementById("total_depot_bnf").innerHTML = roundToTwo(bnfTotalDepot);
-  document.getElementById("total_oral_bnf").innerHTML = roundToTwo(bnfTotalOral);
-  document.getElementById("total_bnf").innerHTML = roundToTwo(total);
-
-  clearTable(oralTable);
-  generateTableHead(oralTable, Object.keys(allPrescriptions[0]));
-  generateTable(oralTable, allPrescriptions);
 }
 
 function addDepot()
@@ -182,7 +182,7 @@ function addDepot()
 	};
 
   depots.push(depotEntry);
-  allPrescriptions.push(oralEntry);
+  allPrescriptions.push(depotEntry);
 
   updateBnfTotals();
 }
