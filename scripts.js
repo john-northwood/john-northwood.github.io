@@ -115,14 +115,14 @@ function addOral()
 
   let bnf = dosage / maxDosage;
 
- 	let depotEntry = {
-		name: depotNames[index],
+ 	let oralEntry = {
+		name: oralNames[index],
     dosage: dosage,
     timing: "1 Day",
     bnf: bnf
 	};
 
-  orals.push(depotEntry);
+  orals.push(oralEntry);
 
   updateBnfTotals();
 
