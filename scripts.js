@@ -139,13 +139,13 @@ function addOral()
   let index = oralPerscriptionSelection.selectedIndex;
   let maxDosage = maxOralDosages[index];
 
-  let bnf = dosage / maxDosage;
+  let bnf = roundToTwo(dosage / maxDosage);
 
  	let oralEntry = {
 	  "Perscription Name": oralNames[index] + " [oral]",
     "Dosage (mg)": dosage,
     Timing: "1 Day",
-    BNF: roundToTwo(bnf)
+    BNF: bnf
 	};
 
   orals.push(oralEntry);
@@ -172,13 +172,13 @@ function addDepot()
   let weeks = depotTimingDivisor[weeksIndex] ;
   let days = weeks * 7;
 
-  let bnf = (dosage / (days/maxTiming)) / maxDosage;
+  let bnf = roundToTwo((dosage / (days/maxTiming)) / maxDosage);
 
  	let depotEntry = {
 		"Perscription Name": depotNames[index] + " [depot]",
     "Dosage (mg)": dosage,
     Timing: timings[weeksIndex],
-    BNF: roundToTwo(bnf)
+    BNF: bnf
 	};
 
   depots.push(depotEntry);
