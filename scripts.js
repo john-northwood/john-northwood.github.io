@@ -143,7 +143,7 @@ function addOral()
 
  	let oralEntry = {
 		name: oralNames[index] + " [oral]",
-    dosage: dosage,
+    "Dosage (mg)": dosage,
     timing: "1 Day",
     bnf: roundToTwo(bnf)
 	};
@@ -176,7 +176,7 @@ function addDepot()
 
  	let depotEntry = {
 		name: depotNames[index] + " [depot]",
-    dosage: dosage,
+    "Dosage (mg)": dosage,
     timing: timings[weeksIndex],
     bnf: roundToTwo(bnf)
 	};
