@@ -53,6 +53,7 @@ oralTableDiv.appendChild(oralTable);
 
 var depots = [];
 var orals = [];
+var allPrescriptions = [];
 
 function roundToTwo(num) {
     return +(Math.round(num + "e+2")  + "e-2");
@@ -123,12 +124,9 @@ function addOral()
 	};
 
   orals.push(oralEntry);
+  allPrescriptions.push(oralEntry);
 
   updateBnfTotals();
-
-  clearTable(oralTable);
-  generateTableHead(oralTable, Object.keys(orals[0]));
-  generateTable(oralTable, orals);
 }
 
 function updateBnfTotals()
@@ -150,6 +148,10 @@ function updateBnfTotals()
   document.getElementById("total_depot_bnf").innerHTML = roundToTwo(bnfTotalDepot);
   document.getElementById("total_oral_bnf").innerHTML = roundToTwo(bnfTotalOral);
   document.getElementById("total_bnf").innerHTML = roundToTwo(total);
+
+  clearTable(oralTable);
+  generateTableHead(oralTable, Object.keys(allPrescriptions[0]));
+  generateTable(oralTable, allPrescriptions);
 }
 
 function addDepot()
@@ -180,10 +182,7 @@ function addDepot()
 	};
 
   depots.push(depotEntry);
+  allPrescriptions.push(oralEntry);
 
   updateBnfTotals();
-
-  clearTable(depotTable);
-  generateTableHead(depotTable, Object.keys(depots[0]));
-  generateTable(depotTable, depots);
 }
