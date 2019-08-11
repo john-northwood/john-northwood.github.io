@@ -125,7 +125,7 @@ function addOral()
  	let depotEntry = {
 		oral: depotNames[index],
     dosage: dosage,
-    timing: "1 Day"
+    timing: "1 Day",
     bnf: bnf
 	};
 
