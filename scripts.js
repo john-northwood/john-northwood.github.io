@@ -145,7 +145,7 @@ function addOral()
 		name: oralNames[index] + " [oral]",
     dosage: dosage,
     timing: "1 Day",
-    bnf: bnf
+    bnf: roundToTwo(bnf)
 	};
 
   orals.push(oralEntry);
@@ -178,7 +178,7 @@ function addDepot()
 		name: depotNames[index] + " [depot]",
     dosage: dosage,
     timing: timings[weeksIndex],
-    bnf: bnf
+    bnf: roundToTwo(bnf)
 	};
 
   depots.push(depotEntry);
